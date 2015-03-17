@@ -1,0 +1,12 @@
+<a href="#" analytics-on="click" analytics-event="Download">Test me</a>
+
+<script>
+angular.module('myApp', ['angulartics', 'angulartics.google.analytics']);
+module.config(function ($analyticsProvider) {
+  // turn off automatic tracking
+  $analyticsProvider.virtualPageviews(true);
+  
+  module.controller('SampleCtrl', function ($analytics) {
+  $analytics.eventTrack('Download');
+  $analytics.eventTrack('Download', {  category: 'category', label: 'label' });
+</script>
