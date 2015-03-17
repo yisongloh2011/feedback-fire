@@ -37,7 +37,7 @@
                 
         <h3> Counters and Timers and Queues </h3>
         Demonstraton of how to eempliment couters, timers, and task queues on Firebase. <br><br>
-<a href="file.pdf" analytics-on="click" analytics-event="Download">Download</a>
+<a href="#" analytics-on="click" analytics-event="Download">Click to test</a> </br>
   
     <button class="btn btn-success" ng-click="addCounter(theKey)">
         Add Counter
@@ -480,6 +480,8 @@
     module.config(function ($analyticsProvider) {
   // turn off automatic tracking
   $analyticsProvider.virtualPageviews(false);
+  module.controller('SampleCtrl', function ($analytics) {
+  $analytics.eventTrack('Download');
 
   </script>
 </body>
